@@ -24,20 +24,20 @@ export default function Home() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="flex flex-col items-center gap-0">
+        <div className="flex flex-col items-center">
           {/* Logo */}
           <Image
             src="/logo.png"
             alt="Holding Company of the Andes Logo"
-            width={260}
-            height={260}
-            className={`animate-logo-fade-in transition-all duration-500 ${isHovered ? 'scale-95' : 'scale-100'}`}
+            width={300}
+            height={300}
+            className={`w-[280px] md:w-[300px] h-auto animate-logo-fade-in transition-all duration-500 ${isHovered ? 'scale-95' : 'scale-100'}`}
             priority
           />
 
           {/* Hero Text - Directly below logo */}
           <p 
-            className={`max-w-2xl text-center text-base leading-relaxed text-white/90 md:text-lg font-light tracking-wide transition-all duration-500 ${
+            className={`-mt-5 max-w-xs md:max-w-2xl text-center text-sm md:text-base lg:text-lg leading-snug md:leading-relaxed text-white/90 font-light tracking-wide transition-all duration-500 ${
               isHovered ? 'opacity-100' : 'opacity-0'
             }`}
           >
