@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-libre-baskerville: 'Libre Baskerville', serif;
+}
+
+body {
+  font-family: var(--font-libre-baskerville);
+}
+
+/* Background zoom animation on page load */
+@keyframes bg-zoom {
+  0% {
+    transform: scale(1.2);
+    filter: blur(8px);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+.animate-bg-zoom {
+  animation: bg-zoom 3s ease-out forwards;
+}
+
+/* Overlay fade in */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 2s ease-out forwards;
+}
+
+/* Logo fade in and scale */
+@keyframes logo-fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-logo-fade-in {
+  animation: logo-fade-in 1.5s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
